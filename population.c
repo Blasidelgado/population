@@ -1,4 +1,3 @@
-#include <cs50.h>
 #include <stdio.h>
 
 int years(int start, int expected);
@@ -9,7 +8,8 @@ int main(void)
     // Prompt for start size
     do
     {
-        start_population = get_int("Enter the start population: ");
+        printf("Enter the start population: ");
+        scanf("%i", &start_population);
     }
 
     while (start_population < 9);
@@ -18,7 +18,8 @@ int main(void)
     // Prompt for end size
     do
     {
-        expected_population = get_int("Enter the expected population: ");
+        printf("Enter the expected population: ");
+        scanf("%i", &expected_population);
     }
 
     while (expected_population < start_population);
@@ -40,4 +41,3 @@ int years(int start, int expected)
 
     return year;
 }
-
